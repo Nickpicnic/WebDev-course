@@ -1,0 +1,20 @@
+h1 {
+	font-family: 'Raleway', sans-serif;
+	text-align: center;
+	font-weight: bold;
+}
+
+table {
+	margin: 0 auto;
+}
+
+table .vert {
+	padding: 50px;
+	border-left: solid gray 1px;
+	border-right: solid gray 1px;
+}
+table .hor {
+	padding: 50px;
+	border-top: solid gray 1px;
+	border-bottom: solid gray 1px;	
+}

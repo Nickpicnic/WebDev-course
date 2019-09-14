@@ -2,9 +2,9 @@
 
 function average(test_scores){
     var sum = 0;
-    for (var i = 0; i < test_scores.length; i++){
-        sum += test_scores[i];
-    }
+    test_scores.forEach(score => {
+        sum += score;
+    });
     console.log((Math.round(sum / test_scores.length)));
 };
 

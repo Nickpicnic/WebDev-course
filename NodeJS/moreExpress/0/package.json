@@ -1,0 +1,19 @@
+{
+  "name": "expressexercise",
+  "version": "1.0.0",
+  "description": "The Express JS first basic exrcise",
+  "main": "app.js",
+  "scripts": {
+    "test": "console.log(\"O.K.\")"
+  },
+  "keywords": [
+    "basic",
+    "exercise",
+    "express"
+  ],
+  "author": "NickPicNic",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

@@ -1,0 +1,19 @@
+<!-- include header template -->
+<% include partials/header %>
+
+<h1>This is a Posts Page</h1>
+
+<%for(var i = 0; i < postsVariable.length; i++){ %>
+    <li>
+        <%= postsVariable[i].author %> - <strong><%= postsVariable[i].title %></strong>
+    </li>
+<% } %>
+
+<% postsVariable.forEach(function(postsVariable){ %>
+    <li>
+           <strong><%= postsVariable.author %></strong>  - <%= postsVariable.title %>
+    </li>
+<% }) %>
+
+<!-- include footer template -->
+<% include partials/footer %>

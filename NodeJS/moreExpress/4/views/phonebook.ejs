@@ -1,0 +1,32 @@
+<% include partials/header %>
+<div id="peopleTable">
+    <table>
+        <tr id="headerLine">
+            <td><strong>Name</strong></td>
+            <td><strong>LastName</strong></td>
+            <td><strong>Age</strong></td> 
+            <td><strong>City</strong></td>
+            <td><strong>Phone Number</strong></td>
+        </tr>
+        <% peoples.forEach(function(person){ %>
+            <tr>
+                <td><%= person.Name %></td>
+                <td><%= person.LastName %></td>
+                <td><%= person.Age %></td>
+                <td><%= person.City %></td>
+                <td><%= person.PhoneNumber %></td>
+            </tr>
+        <% }); %>
+    </table>
+</div>
+<div id="newPersonForm">
+    <form action="/newPerson" method="POST">
+        <input type="text" name="Name" placeholder="name" required>
+        <input type="text" name="LastName" placeholder="surname" required>
+        <input type="number" name="Age" placeholder="age" required>
+        <input type="text" name="City" placeholder="city" required>
+        <input type="text" name="PhoneNumber" placeholder="phone number" required>
+        <button><i class="fas fa-plus"></i></button>
+    </form>
+</div>
+<% include partials/footer %>

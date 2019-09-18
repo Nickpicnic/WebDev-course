@@ -34,11 +34,6 @@ app.get("/phonebook", function(req, res){
     res.render("phonebook",{peoples: phoneNumbers});
 });
 
-// Exact Number Page
-// app.get("/phonebook/:anyName", function(req, res){
-//     res.render("")
-// });
-
 // Error Page
 app.get("*", function(req, res){
     res.render("error");

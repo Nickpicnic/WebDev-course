@@ -1,0 +1,78 @@
+body {
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+tr:nth-child(odd) {  
+    background: rgb(150, 185, 206);
+}
+tr:nth-child(even) {  
+    background: rgba(150, 185, 206, 0.363);
+}
+
+td {
+    margin: 0px;
+    padding: 5px 10px 10px 5px;
+    text-align: center;
+}
+
+form {
+    padding: 3px;
+    background: rgb(65, 127, 179); 
+    width: 820px;
+    border-radius: 0px 10px 10px 0px; 
+}
+
+table {
+    margin: 100px 0px 90px 50px;
+}
+
+input {
+    padding: 10px;
+    margin: 0px 0px 7px 20px;
+    width: 100px;
+    text-transform: uppercase;
+    border: none;
+    text-align: center;
+}
+
+button {
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    margin: 10px 20px 0px 0px;
+}
+
+h1 {
+    float: left;
+    color: white;
+}
+
+#pageHeader {
+    background: rgb(65, 127, 179);
+    margin: 0px;
+    padding: 0px 20px 25px 20px;
+    border-radius: 0px 0px 5px 5px;
+    height: 50px;;
+
+}
+
+#headerLine {
+    background: rgb(65, 127, 179);
+    color: white;
+}
+
+#peopleTable {
+    margin: 20px 0px 20px 30px;
+}
+
+.fa-phone {
+    color: white;
+}
+
+.fa-plus {
+    margin-left: 25px;
+    color: white;
+}

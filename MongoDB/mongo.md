@@ -10,14 +10,14 @@
 * remove
 
 # INSERT
-# db.dogs.insert({name: "dkfjdf", age: "fldkf"})
+* db.dogs.insert({name: "Jack", age: "5"})
 
 # FIND
-# db.dogs.find({name: "dkfjdf"})            // {name: "dkfjdf", age: "fldkf"}
+* db.dogs.find({name: "Jack"})            // {name: "Jack", age: "5"}
 
 # UPDATE
-# db.dogs.update({.. : ..}, {.. : ..})                                  // overwrite
-# db.dogs.update({.. : ..}, {$set: {name: "dlkld", bred: "lednls"}})    // append
+* db.dogs.update({name : "Jack"}, {breed : "Jack"})                                  // overwrite
+* db.dogs.update({name : "Jack"}, {$set: {name: "Jack", breed: "Lab"}})    // append
 
 # REMOVE
-# db.dogs.remove({breed: "Labradoodle"})        // delete all that matches
+* db.dogs.remove({breed: "Labradoodle"})        // delete all that matches

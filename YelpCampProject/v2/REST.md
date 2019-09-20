@@ -1,8 +1,8 @@
 # RESTFUL ROUTES
 
-name        url             verb        description
-=======================================================================
-INDEX       /dogs           GET         Displays a list of all dog
-NEW         /dogs/new       GET         Displays form to make a new dog
-CREATE      /dogs           POST        Add new dog to DB
-SHOW        /dogs/:id       GET         Shows info about one dog
+# name________url____________verb________description
+* =======================================================================
+* INDEX_______/dogs___________GET_________Displays a list of all dog
+* NEW_________/dogs/new_______GET_________Displays form to make a new dog
+* CREATE______/dogs___________POST________Add new dog to DB
+* SHOW________/dogs/:id_______GET_________Shows info about one dog

@@ -11,9 +11,22 @@
 * Git Checkout
 * git revert --no-commit 0766c053..HEAD
 
-# Cloning and Github Intro
-* Cloning an existing repo
+# Git Branches
+* Listing all branches
+    - git branch
+* Adding a branch
+    - git checkout -b <name_of_new_branch>
+* Changing branch
+    - git checkout <branch_name>
+* Merge branches
+    - git merge <another_branch_name>
+* Remove a branch
+    - git branch -d <branch_name>
 
-# Pushing to Github
-* Creating a repo on github
-* Adding a remote
+# Github
+* Connect to github
+    - git remote add origin <url>
+* Check github connection
+    - git remote -v
+* Push to github
+    - git push -u origin master

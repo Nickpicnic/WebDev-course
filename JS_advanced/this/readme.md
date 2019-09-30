@@ -1,4 +1,3 @@
-# OOP
 # The Keyword 'this'
 * a reserved keyword in JS
 * usually determined by how a function is called

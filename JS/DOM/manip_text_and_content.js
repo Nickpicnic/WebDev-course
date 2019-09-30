@@ -30,7 +30,7 @@ tag.textContent = "blah blah blah"; // reset the content
 </p>
 
 //Select the <p> tag:
-var tag = document,querySelector("p");
+var tag = document.querySelector("p");
 
 tag.innerHTML
 // "This is an <strong>awesome</strong> paragraph."

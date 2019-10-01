@@ -18,7 +18,7 @@
 
 # Closures
 * Closure is a function that makes use of variables defined in outer functions that have previously returned
-    - We have to "return" the inner function for this to work
+    - We have to **"return"** the inner function for this to work
 
     - We can either call the inner function right away by using an extra() or we can store the results of the function in a variable (very similar to how bind works)
 

@@ -1,0 +1,200 @@
+/* ========================================
+    MODERN LAYOUTS
+=========================================== */
+body {
+    margin: 0;
+}
+
+.content {
+    padding: 20px;
+    width: 75%;
+    margin: auto;
+    background-color: rgba(210, 236, 240, 0.301);
+}
+h4:first-child {
+    margin-top: 0;
+}
+
+.logo {
+    height: 100%;
+    padding: 30px 20px 30px 20px;
+}
+
+/* ========================================
+    LAYOUT 1
+=========================================== */
+
+.layout1 * {
+    background-color: rgba(210, 236, 240, 0.575);
+    padding: 5px;
+    margin: 10px;
+}
+.layout1 {
+    padding-bottom: 30px;;
+}
+
+.layout1 article {
+    width:50%;
+    float: left;
+}
+
+.layout1 aside {
+    width: 40%;
+    float: right;
+}
+
+.layout1 footer {
+    clear: both;
+}
+
+/* ========================================
+    LAYOUT 2
+=========================================== */
+
+.layout2 * {
+    background-color: rgba(210, 236, 240, 0.575);
+    padding: 5px;
+    margin: 10px;
+}
+
+.layout2 ul {
+    width: 300px;
+    margin: 0;
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+}
+    .layout2 a {
+        color: rgb(79, 194, 179);
+        text-decoration-line: none;
+        border-bottom: 1px dotted rgb(79, 194, 179) ;
+    }
+    .layout2 a:hover {
+        color:white;
+        background-color: rgb(79, 194, 179);
+        border-radius: 2px;
+    }
+
+.layout2 header {
+    height: 50px;
+}
+
+.layout2 header .logo {
+    width: 20%;
+    float: left;
+    margin: 0;
+}
+
+.layout2 header nav {
+    width: 78%;
+    float: right;
+    margin: 0;
+}
+
+/* simple clearfix to prevent collapse */
+
+.layout2 header::after {
+    display: table;
+    content: "";
+    clear: both;
+}
+.layout2 article {
+    width: 50%;
+    margin-left: 2%;
+    float: left;
+  }
+   
+  .layout2 aside.sidenav {
+    width: 23%;
+    float: left;
+  }
+   
+  .layout2 aside.sidebar {
+    width: 23%;
+    float: right;
+  }
+   
+  .layout2 footer {
+    clear: both;
+  }
+
+/* ========================================
+    LAYOUT 3
+=========================================== */
+
+.layout3 * {
+    background-color: rgba(210, 236, 240, 0.575);
+    padding: 5px;
+    margin: 10px;
+}
+
+.layout3 ul {
+    width: 300px;
+    margin: 0;
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+}
+    .layout3 a {
+        color: rgb(79, 194, 179);
+        text-decoration-line: none;
+        border-bottom: 1px dotted rgb(79, 194, 179) ;
+    }
+    .layout3 a:hover {
+        color:white;
+        background-color: rgb(79, 194, 179);
+        border-radius: 2px;
+    }
+
+.layout3 header .logo {
+    width: 20%;
+    float: right;
+    margin: 0;
+}
+
+.layout3 header nav {
+    width: 78%;
+    float: left;
+    margin: 0;
+}
+
+.layout3 header::after {
+    display: table;
+    content: "";
+    clear: both;
+}
+
+.layout3 article {
+    width: 32%;
+    float: left;
+    margin: 0 2% 0 0;
+}
+
+.layout3 article:last-child {
+    margin: 0;
+}
+.layout3 .articles::after {
+    display: table;
+    content: "";
+    clear: both;
+}
+
+/* SIMPLE MEDIA QUERIES FOR RESPONSIVE LAYOUTS */
+
+@media screen and ( max-width : 768px ) {
+    .layout1 article,
+    .layout1 aside,
+    .layout2 header .logo,
+    .layout2 header nav,
+    .layout2 article,
+    .layout2 aside.sidenav,
+    .layout2 aside.sidebar,
+    .layout3 article,
+    .layout3 aside,
+    .layout3 header .logo,
+    .layout3 header nav {
+        float: none;
+        width: 100%;
+        margin: 0 0 2%;
+  }
+}

@@ -1,0 +1,43 @@
+/* ========================================
+    FOOTER
+   ====================================== */
+
+body {
+    background-color: #eee;
+}
+
+.page-content, footer{
+    display: flex;
+    width: 70%;
+    margin: 20px auto;
+    padding: 10px;
+    justify-content: center;
+}
+
+footer {
+    background-color: white;
+    margin-bottom: 0;
+
+}
+
+/* ===================================== */
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.page-content {
+    min-height: 100%;
+
+    margin-bottom: -120px;
+}
+
+.page-content::after {
+    content: "";
+    display: block;
+}
+
+footer, .page-content::after {
+    height: 120px;
+}

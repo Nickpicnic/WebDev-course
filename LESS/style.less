@@ -1,0 +1,253 @@
+// ========= 1 =========
+
+@bg-path: "logo-less.png";
+@bg-color: #1d365d;
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: @bg-color url(@bg-path) 50% 25% no-repeat;
+}
+
+// ========= 2 =========
+
+.rule-1 {
+    @align: right;
+    text-align: @align; // text-align === right
+  }
+  .rule-2 {
+    text-align: @align; // error
+  }
+
+  @align: left;
+
+.rule-1 {
+  @align: right;
+  text-align: @align; // text-align === right
+}
+
+.rule-2 {
+  text-align: @align; // text-align === left
+}
+
+// ========= 3 =========
+// color wheel
+
+color: spin(red, 90); // color will "rotate" by 90deg clockwise
+border-color: spin(#f0f, -45); // color will "rotate" by 45deg counterclockwise from the #f0f
+
+@base-color: rgb(110, 27, 255);
+@distance: 180;
+@complementary-color: spin(@base-color, @distance);
+
+.color-primary {
+  background-color: @base-color;
+}
+
+.color-complementary {
+  background-color: @complementary-color;
+}
+
+// ========= 4 =========
+// nested rules
+
+// CSS
+.super-class-name {
+    color: #ffffff;
+  }
+  
+  .super-class-name a {
+    text-decoration: none;
+  }
+  
+  .super-class-name a span {
+    font-size: 1em;
+  }
+
+// LESS
+.super-class-name {
+    color: #ffffff;
+  
+    a {
+      text-decoration: none;
+      span {
+        font-size: 1em;
+      }
+    }
+  }
+
+// ========= 5 =========
+// nested rules for classes
+
+// CSS
+.super-button-red {
+    color: red;
+  }
+  
+  .super-button-blue {
+    color: blue;
+  }
+
+// LESS
+.super-button {
+    &-red { color: red; }
+  
+    &-blue { color: blue; }
+}
+
+// ========= 6 =========
+// math
+
+padding-top: 10px + 20; // = 30px
+padding-bottom: 100px - 50; // = 50px
+font-size: 2em * 2; // = 4em
+left: 50% / 2; // 25%
+
+rgb(10, 10, 10) + 10
+
+// the same as
+
+rgb(20, 20, 20)
+
+// ========= 7 =========
+// color functions p.2
+
+color: lighten(red, 50%); // makes red lighter by 50%
+color: darken(blue, 25%); // makes blue darker by 25%
+
+// CSS
+.btn-hover,
+.btn:hover {
+  color: red;
+}
+
+// LESS
+.btn {
+    &-hover,
+    &:hover {
+      color: red;
+    }
+  }
+
+// another exmaple
+@base-color: rgb(110, 27, 255);
+
+.btn {
+  &-primary {
+    background-color: @base-color;
+    &-hover,
+    &:hover {
+      background-color: lighten(@base-color, 20%);
+    }
+    &-pressed,
+    &:active {
+      background-color: darken(@base-color, 20%);
+    }
+  }
+}
+
+// ========= 7 =========
+// color functions p.3
+
+color: saturate(green, 20%); 
+color: desaturate(blue, 50%); 
+
+color: saturate(lighten(red, 50%), 20%);
+color: desaturate(darken(blue, 20%), 50%);
+
+@base-color: rgb(110, 27, 255);
+@alter-color: spin(@base-color, 60);
+
+.btn {
+  &-primary {
+    background-color: @base-color;
+
+    &-hover,
+    &:hover {
+      background-color: lighten(@base-color, 20%);
+    }
+
+    &-pressed,
+    &:active {
+      background-color: darken(@base-color, 20%);
+    }
+
+    &-disabled {
+      color: rgba(255, 255, 255, 0.8);
+      background-color: desaturate(lighten(@base-color, 20%), 70%);
+    }
+  }
+}
+
+// ========= 8 =========
+// color functions p.4
+
+/*----- Basic Colors -----*/
+
+@base-color: rgb(110, 27, 255);
+@error-color: spin(@base-color, 60);
+@info-color: spin(@base-color, -60);
+@warning-color: spin(@base-color, 120);
+@success-color: spin(@base-color, -120);
+
+/*----- Message Colors -----*/
+
+@alert-primary-bg: lighten(@base-color, 35%);
+@alert-primary-border: darken(spin(@alert-primary-bg, -10), 5%);
+@alert-primary-text: darken(@alert-primary-bg, 50%);
+
+@alert-error-bg: lighten(@error-color, 35%);
+@alert-error-border: darken(spin(@alert-error-bg, -10), 5%);
+@alert-error-text: darken(@alert-error-bg, 50%);
+
+@alert-info-bg: lighten(@info-color, 35%);
+@alert-info-border: darken(spin(@alert-info-bg, -10), 5%);
+@alert-info-text: darken(@alert-info-bg, 50%);
+
+@alert-warning-bg: lighten(@warning-color, 35%);
+@alert-warning-border: darken(spin(@alert-warning-bg, -10), 5%);
+@alert-warning-text: darken(@alert-warning-bg, 50%);
+
+@alert-success-bg: lighten(@success-color, 35%);
+@alert-success-border: darken(spin(@alert-success-bg, -10), 5%);
+@alert-success-text: darken(@alert-success-bg, 50%);
+
+/*----- Messages rules -----*/
+
+.alert {
+  &-primary {
+    border-color: @alert-primary-border;
+    background-color: @alert-primary-bg;
+    color: @alert-primary-text;
+  }
+
+  &-error {
+    border-color: @alert-error-border;
+    background-color: @alert-error-bg;
+    color: @alert-error-text;
+  }
+
+  &-info {
+    border-color: @alert-info-border;
+    background-color: @alert-info-bg;
+    color: @alert-info-text;
+  }
+
+  &-warning {
+    border-color: @alert-warning-border;
+    background-color: @alert-warning-bg;
+    color: @alert-warning-text;
+  }
+  
+  &-success {
+    border-color: @alert-success-border;
+    background-color: @alert-success-bg;
+    color: @alert-success-text;
+  }
+}
